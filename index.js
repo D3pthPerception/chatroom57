@@ -73,33 +73,7 @@ function settext()
     });
 }
 
-database.ref('users').on('value', function(snapshot) {
-    var results = Object.values(snapshot.val());
-    document.getElementById('clickable').innerHTML = "";
-    for (var i = 0; i < results.length; i ++)
-    {
-        if (results[i].r != 0)
-        {
-            var players = document.createElement("DIV");
-            players.style.width = "50px";
-            players.style.height = "50px";
-            players.style.position = "absolute";
-            players.style.transition = "left .5s, top .5s"
-            players.style.transitionTimingFunction = "ease-out";
-            players.style.background = "green";
-            players.style.left = results[i].x + "%";
-            players.style.top = results[i].y + "%";
-            document.getElementById("clickable").appendChild(players);
-            var text = document.createElement("P");
-            text.innerText = results[i].t;
-            text.style.width = "100px";
-            text.style.display = "inline-text"
-            text.style.transform = "translate(0%, -50px)"
-            players.appendChild(text);
 
-        }
-    }
-});
 
 window.onbeforeunload = function(){
     database.ref("users/" + auth.currentUser.uid).update({
