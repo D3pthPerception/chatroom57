@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="control">
+        <button onclick="logout()" id="logout">Log Out</button>
+        <input id="text">
+        <button onclick="settext()" id="settext">set text</button>
+    </div>
+
+
+    <div onclick="setPos()" id="clickable">
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-analytics.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDLnGqduAB7CenRLoLoPbrHovY9KyZaDDA",
+            authDomain: "chat57-67930.firebaseapp.com",
+            databaseURL: "https://chat57-67930.firebaseio.com",
+            projectId: "chat57-67930",
+            storageBucket: "chat57-67930.appspot.com",
+            messagingSenderId: "449587826131",
+            appId: "1:449587826131:web:5c6b4e6a82a76e9558b326",
+            measurementId: "G-B6XELTCHLY"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+</body>
+<script src="index.js"></script>
+<link href="index.css" rel="stylesheet">
+</html>
